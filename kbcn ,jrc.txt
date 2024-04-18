@@ -1,0 +1,34 @@
+ <ListBox x:Name="MaterialTextBox" Style="{StaticResource ListBoxStyle}" Margin="55,146,0,0" SelectionChanged="ListBox_SelectionChanged" Height="82" Width="314">
+                <ListBoxItem Content="Хлопок"/>
+                <ListBoxItem Content="Шерсть"/>
+                <ListBoxItem Content="Лён"/>
+                <ListBoxItem Content="Шёлк"/>
+                <ListBoxItem Content="Джинсовая ткань"/>
+                <ListBoxItem Content="Кожа"/>
+                <ListBoxItem Content="Полиэстер"/>
+                <ListBoxItem Content="Вельвет"/>
+                <ListBoxItem Content="Бархат"/>
+                <ListBoxItem Content="Флис"/>
+                <ListBoxItem Content="Кружево"/>
+            </ListBox>
+
+
+<ListView Name="itemListView" Margin="41,10,41,64" Background="#979aaa" BorderBrush="Black" BorderThickness="1">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Название" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" Foreground="#FF1FD2C6" FontSize="30" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Тип" Width="50" DisplayMemberBinding="{Binding Type}" />
+                        <GridViewColumn Header="Цвет" Width="70" DisplayMemberBinding="{Binding Color}" />
+                        <GridViewColumn Header="Цена" Width="70" DisplayMemberBinding="{Binding Price}" />
+                        <GridViewColumn Header="Материал одежды" Width="150" DisplayMemberBinding="{Binding ClothingMaterial}" />
+                        <GridViewColumn Header="Материал обуви" Width="150" DisplayMemberBinding="{Binding ShoeMaterial}" />
+                        <GridViewColumn Header="Материал подошвы" Width="150" DisplayMemberBinding="{Binding SoleMaterial}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
